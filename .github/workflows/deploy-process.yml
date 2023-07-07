@@ -1,0 +1,14 @@
+name: Deploy
+
+on:
+  repository_dispatch:
+    types: [TEST_FINISH_TRIGGER]
+    
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      -name: Say Hello
+       run: |
+        echo "Hello!"
